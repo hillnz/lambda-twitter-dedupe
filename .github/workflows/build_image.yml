@@ -46,7 +46,7 @@ jobs:
           username: ${{ secrets.AWS_ACCESS_KEY_ID }}
           password: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         env:
-          AWS_REGION: ap-southeast-2
+          AWS_REGION: us-east-1
 
       - name: Extract version
         id: extract_version
