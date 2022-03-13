@@ -52,7 +52,7 @@ module "lambda" {
 
   function_name  = var.name
   create_package = false
-  image_uri      = "public.ecr.aws/jonohill/lambda-twitter-dedupe:${var.version}"
+  image_uri      = "public.ecr.aws/i9i4x6d4/lambda-twitter-dedupe:${var.version}"
   package_type   = "Image"
   publish        = true
   architectures  = ["arm64"]

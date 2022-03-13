@@ -9,7 +9,7 @@ on:
       - main
 
 env:
-  DOCKER_REPO: public.ecr.aws/jonohill/lambda-twitter-dedupe
+  DOCKER_REPO: public.ecr.aws/i9i4x6d4/lambda-twitter-dedupe
 
 jobs:
   main:
