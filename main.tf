@@ -10,11 +10,6 @@ resource "aws_dynamodb_table" "cache" {
     type = "S"
   }
 
-  attribute {
-    name = "expires"
-    type = "N"
-  }
-
   ttl {
     attribute_name = "expires"
     enabled        = true
@@ -39,7 +34,7 @@ module "eventbridge" {
     crons = [
       {
         name  = "${var.name}-cron"
-        arn   = module.lambda.function_arn
+        arn   = module.lambda.lambda_function_arn
         input = jsonencode({ "job" : "cron-by-rate" })
       }
     ]
@@ -52,7 +47,7 @@ module "lambda" {
 
   function_name  = var.name
   create_package = false
-  image_uri      = "public.ecr.aws/i9i4x6d4/lambda-twitter-dedupe:${var.version}"
+  image_uri      = "public.ecr.aws/i9i4x6d4/lambda-twitter-dedupe:${var.deploy_version}"
   package_type   = "Image"
   publish        = true
   architectures  = ["arm64"]
