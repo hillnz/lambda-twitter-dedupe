@@ -43,7 +43,7 @@ module "eventbridge" {
 
 module "lambda" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = "2.35.0"
+  version = "2.36.0"
 
   function_name  = var.name
   create_package = false
