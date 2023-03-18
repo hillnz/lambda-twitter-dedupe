@@ -19,7 +19,7 @@ resource "aws_dynamodb_table" "cache" {
 
 module "eventbridge" {
   source  = "terraform-aws-modules/eventbridge/aws"
-  version = "1.14.0"
+  version = "1.17.3"
 
   create_bus = false
 
