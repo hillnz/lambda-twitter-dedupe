@@ -1,4 +1,4 @@
-ARG APP_VERSION=0.7.3
+ARG APP_VERSION=0.7.4
 FROM jonoh/twitter-dedupe:${APP_VERSION} AS source
 
 FROM public.ecr.aws/lambda/python:3.9
